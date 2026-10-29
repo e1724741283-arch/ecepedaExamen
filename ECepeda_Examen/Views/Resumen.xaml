@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ECepeda_Examen.Views.Resumen"
+             Title="Resumen">
+
+    <ContentPage.Resources>
+        <Style x:Key="styleDato" TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="TextColor" Value="Blue"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="10">
+
+            <Label x:Name="lblUsuario"
+                   Style="{StaticResource LabelGlobal}"
+                   HorizontalTextAlignment="End"/>
+
+            <Label
+                Text="RESUMEN"
+                FontSize="22"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+
+            <Grid RowSpacing="10"
+                  ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nombre:"
+                       Style="{StaticResource LabelGlobal}"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+                <Label x:Name="lblNombre"
+                       Style="{StaticResource styleDato}"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+
+                <Label Text="Apellido:"
+                       Style="{StaticResource LabelGlobal}"
+                       Grid.Row="1"
+                       Grid.Column="0"/>
+                <Label x:Name="lblApellido"
+                       Style="{StaticResource styleDato}"
+                       Grid.Row="1"
+                       Grid.Column="1"/>
+
+                <Label Text="Edad:"
+                       Style="{StaticResource LabelGlobal}"
+                       Grid.Row="2"
+                       Grid.Column="0"/>
+                <Label x:Name="lblEdad"
+                       Style="{StaticResource styleDato}"
+                       Grid.Row="2"
+                       Grid.Column="1"/>
+
+                <Label Text="Fecha de inicio:"
+                       Style="{StaticResource LabelGlobal}"
+                       Grid.Row="3"
+                       Grid.Column="0"/>
+                <Label x:Name="lblFechaInicio"
+                       Style="{StaticResource styleDato}"
+                       Grid.Row="3"
+                       Grid.Column="1"/>
+
+                <Label Text="Plan:"
+                       Style="{StaticResource LabelGlobal}"
+                       Grid.Row="4"
+                       Grid.Column="0"/>
+                <Label x:Name="lblPlan"
+                       Style="{StaticResource styleDato}"
+                       Grid.Row="4"
+                       Grid.Column="1"/>
+
+                <Label Text="Casillero:"
+                       Style="{StaticResource LabelGlobal}"
+                       Grid.Row="5"
+                       Grid.Column="0"/>
+                <Label x:Name="lblCasillero"
+                       Style="{StaticResource styleDato}"
+                       Grid.Row="5"
+                       Grid.Column="1"/>
+
+                <Label Text="Monto Inicial:"
+                       Style="{StaticResource LabelGlobal}"
+                       Grid.Row="6"
+                       Grid.Column="0"/>
+                <Label x:Name="lblMontoInicial"
+                       Style="{StaticResource styleDato}"
+                       Grid.Row="6"
+                       Grid.Column="1"/>
+
+                <Label Text="Pago mensual:"
+                       Style="{StaticResource LabelGlobal}"
+                       Grid.Row="7"
+                       Grid.Column="0"/>
+                <Label x:Name="lblPagoMensual"
+                       Style="{StaticResource styleDato}"
+                       Grid.Row="7"
+                       Grid.Column="1"/>
+
+                <Label Text="Pago Total:"
+                       Style="{StaticResource LabelGlobal}"
+                       Grid.Row="8"
+                       Grid.Column="0"/>
+                <Label x:Name="lblPagoTotal"
+                       Style="{StaticResource styleDato}"
+                       Grid.Row="8"
+                       Grid.Column="1"/>
+            </Grid>
+
+            <Grid ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnNuevoRegistro"
+                        Style="{StaticResource BotonGlobal}"
+                        Text="Nuevo registro"
+                        Clicked="btnNuevoRegistro_Clicked"
+                        Grid.Column="0"/>
+                <Button x:Name="btnCerrarSesion"
+                        Style="{StaticResource BotonGlobal}"
+                        Text="Cerrar sesión"
+                        Clicked="btnCerrarSesion_Clicked"
+                        Grid.Column="1"/>
+            </Grid>
+
+            <Button x:Name="btnExportar"
+                    Style="{StaticResource BotonGlobal}"
+                    Text="Exportar a TXT"
+                    Clicked="btnExportar_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

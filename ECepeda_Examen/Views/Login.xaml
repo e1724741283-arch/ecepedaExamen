@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ECepeda_Examen.Views.Login"
+             Title="Login">
+
+    <ContentPage.Resources>
+        <Style x:Key="styleEntry" TargetType="Entry">
+            <Setter Property="Background" Value="Beige"/>
+            <Setter Property="TextColor" Value="Blue"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout
+        Spacing="10"
+        Padding="20">
+        <Label
+            Text="INICIO DE SESIÓN"
+            TextColor="Purple"
+            FontSize="26"
+            FontAttributes="Bold"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+
+        <Image Source="logo.jpg"
+               WidthRequest="150"/>
+
+        <Grid
+              RowSpacing="10"
+              ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Usuario:"
+                   Style="{StaticResource LabelGlobal}"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtUsuario"
+                   Style="{StaticResource styleEntry}"
+                   Placeholder="Ingresa el usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+
+            <Label Text="Contraseña:"
+                   Style="{StaticResource LabelGlobal}"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtContrasena"
+                   Style="{StaticResource styleEntry}"
+                   Placeholder="Ingresa la contraseña"
+                   IsPassword="True"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+
+            <Button x:Name="btnIniciarSesion"
+                    Style="{StaticResource BotonGlobal}"
+                    Text="Iniciar sesión"
+                    Clicked="btnIniciarSesion_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="0"/>
+            <Button x:Name="btnAcercaDe"
+                    Style="{StaticResource BotonGlobal}"
+                    Text="Acerca de"
+                    Clicked="btnAcercaDe_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="1"/>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>
